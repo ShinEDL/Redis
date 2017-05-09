@@ -8,9 +8,8 @@ docker rm -f $CONTAINER_NAME
 
 docker build -t $IMAGE_NAME .
 
-docker run -d --name=$CONTAINER_NAME \
-	--env-file ./env.list \
+docker run -it --rm --name=$CONTAINER_NAME \
+	-v $PWD/run.sh:/run.sh \
 	$IMAGE_NAME \
-	/usr/local/redis/src/redis-trib.rb create --replicas 1 \
-	REDIS1 REDIS2 REDIS3 \
-	REDIS4 REDIS5 REDIS6
+	/bin/bash
+
