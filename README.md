@@ -25,3 +25,5 @@ $ {yourproject}/deploy.sh
 用于启动redis集群
 
 修改集群配置`run.sh`，配置好redis ip，然后启动`start.sh`.
+
+之后进入容器命令行界面，执行`./run.sh`，启动redis集群。
