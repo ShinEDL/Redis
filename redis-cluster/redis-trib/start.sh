@@ -10,6 +10,7 @@ docker build -t $IMAGE_NAME .
 
 docker run -it --rm --name=$CONTAINER_NAME \
 	-v $PWD/run.sh:/run.sh \
+	-v $PWD/client.rb:/client.rb \
 	$IMAGE_NAME \
 	/bin/bash
 
